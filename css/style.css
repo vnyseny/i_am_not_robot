@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body .imageContainer {
+  width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 3px;
+  grid-gap: 1px;
+  border: 1px solid black;
+}
+
+.img1 {
+  content: url("https://picsum.photos/id/237/200/300");
+}
+
+.img2 {
+  content: url("https://picsum.photos/seed/picsum/200/300");
+}
+
+.img3 {
+  content: url("https://picsum.photos/200/300?grayscale");
+}
+
+.img4 {
+  content: url("https://picsum.photos/200/300/");
+}
+
+.img5 {
+  content: url("https://picsum.photos/200/300.jpg");
+}
+
+body .imageContainer img {
+  border: 5px solid #555;
+  width: 100%;
+}
+
+.selected {
+  border: 5px solid rgb(0, 195, 255);
+  filter: blur(1px);
+}
+
+.verificationContainer {
+  width: 300px;
+  height: 30px;
+  position: relative;
+}
+
+.verificationContainer button {
+  position: absolute;
+  height: inherit;
+  width: 49%;
+  left: 0;
+}
+
+.verificationContainer span {
+  border: 1px solid grey;
+  position: absolute;
+  height: inherit;
+  width: 49%;
+  right: 0;
+  padding-left: 10px;
+  padding-top: 4px;
+}
