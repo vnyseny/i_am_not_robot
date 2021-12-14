@@ -14,7 +14,7 @@ verificationContainer.append(result);
 
 heading.innerText = "Please select similar Images.";
 verifyBtn.innerText = "Verify";
-result.innerText = "Result";
+result.innerText = "Not Verified";
 
 imageContainer.className = "imageContainer";
 verificationContainer.className = "verificationContainer";
@@ -32,8 +32,12 @@ for (let data of imgArr) {
     if (this.classList.contains("selected")) {
       selectCount--;
       this.classList.remove("selected");
+      result.style.color = "red";
+      result.innerText = "Not Verified";
     } else {
       if (selectCount < 2) {
+        result.style.color = "red";
+        result.innerText = "Not Verified";
         selectCount++;
         this.classList.add("selected");
       }
@@ -50,6 +54,9 @@ verifyBtn.addEventListener("click", function () {
     result.innerText =
       selected[0].className == selected[1].className
         ? "Verified"
-        : "Not Verifed";
+        : "Not Verified";
+
+    result.style.color =
+      selected[0].className == selected[1].className ? "green" : "red";
   }
 });

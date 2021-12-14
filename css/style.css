@@ -46,11 +46,6 @@ body .imageContainer img {
   width: 100%;
 }
 
-.selected {
-  border: 5px solid rgb(0, 195, 255);
-  filter: blur(1px);
-}
-
 .verificationContainer {
   width: 300px;
   height: 30px;
@@ -72,4 +67,9 @@ body .imageContainer img {
   right: 0;
   padding-left: 10px;
   padding-top: 4px;
+  color: red;
+}
+body .imageContainer .selected {
+  border: 5px solid rgb(0, 195, 255);
+  filter: blur(1px);
 }
